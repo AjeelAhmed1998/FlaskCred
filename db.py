@@ -1,0 +1,52 @@
+import sqlite3
+
+connection = sqlite3.connect('testing.db')
+
+print("database connection successful")
+
+connection.execute('''
+    CREATE TABLE IF NOT EXISTS SONG
+    (ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+    NAME STRING NOT NULL, 
+    DURATION INT NOT NULL,
+    UPLOADED DATETIME DEFAULT CURRENT_TIMESTAMP); 
+''')
+
+connection.execute('''
+    CREATE TABLE IF NOT EXISTS PODCAST
+    (ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+    NAME STRING NOT NULL, 
+    DURATION INT NOT NULL, 
+    UPLOADED DATETIME DEFAULT CURRENT_TIMESTAMP, 
+    HOST STRING NOT NULL);
+''')
+
+connection.commit()
+
+connection.execute(
+    '''
+    CREATE TABLE IF NOT EXISTS PARTICIPANTS
+    (ID INTEGER PRIMARY KEY AUTOINCREMENT,  
+    P_ID INTEGER NOT NULL, 
+    NAME STRING NOT NULL,
+    FOREIGN KEY (P_ID) REFERENCES PODCAST(ID)
+    ); 
+    '''
+)
+
+connection.execute(
+    '''
+    CREATE TABLE IF NOT EXISTS AUDIOBOOK
+    (ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+    TITLE STRING NOT NULL, 
+    AUTHOR STRING(100) NOT NULL, 
+    NARRATOR STRING NOT NULL, 
+    DURATION INT, 
+    UPLOADED DATETIME DEFAULT CURRENT_TIMESTAMP);
+    
+    '''
+)
+
+print("table created")
+
+connection.close()
