@@ -138,7 +138,7 @@ Response: {
   "UPDATED":"TRUE"
 }`
 
-*Update Audiobook:  `PATCH /audiobook/{id}
+* Update Audiobook:  `PATCH /audiobook/{id}
 Body: {
 
     "title": "AJ", 
@@ -151,11 +151,11 @@ Response: {
 }
 
 
-*Delete Song/Podcast/Audiobook: `DELELTE /{audioFileType}/{audioFileId}`
+* Delete Song/Podcast/Audiobook: `DELELTE /{audioFileType}/{audioFileId}
 Response: {
   "DELETED":"TRUE"
-}
-`
+  }`
+
 
 
 ### Unit Testing
