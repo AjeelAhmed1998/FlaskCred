@@ -19,7 +19,11 @@ is running on 'http://127.0.0.1:5000/'.
 Open endpoints require no Authentication.
 
 * Get Specific Song/Podcast/Audiobook: `GET /{audioFileType}/{audioFileId}
+
+
 Body: None
+
+
 Response: [
     3,
     "seigfried",
@@ -27,7 +31,11 @@ Response: [
 ]`
 
 * Get All Songs/Podcasts/Audiobooks: `GET /{audioFileType}
+
+
 Body: None
+
+
 Response: [
     [
         3,
@@ -43,7 +51,11 @@ Response: [
     ]
 ]`
 
+
+
 * Create Song : `POST /
+
+
 Body: {
     "audioFileType": "song", 
     "audioFileMetadata":{
@@ -51,6 +63,9 @@ Body: {
         "duration": 120
     }
 }
+
+
+
 
 Response: {
     "audioFileMetadata": {
@@ -68,6 +83,9 @@ Response: {
 `
 
 * Create Podcast : `POST /
+
+
+
 Body: {
     "audioFileType": "podcast", 
     "audioFileMetadata": {
@@ -79,6 +97,8 @@ Body: {
 
     }
 }
+
+
 
 Response: {
     "audioFileMetadata": {
@@ -94,7 +114,12 @@ Response: {
     "audioFileType": "podcast"
 }`
 
+
+
 * Create Audiobook : `POST /
+
+
+
 Body: {
     "audioFileType": "audiobook", 
     "audioFileMetadata": {
@@ -104,6 +129,8 @@ Body: {
     "duration": 120
     }
 }
+
+
 
 Response: {
     "audioFileMetadata": {
@@ -115,18 +142,25 @@ Response: {
     "audioFileType": "audiobook"
 }   `
 
+
 * Update Song: `PATCH /song/{id}
+
+
 Body: {
 
     "name": "selfcontrol", 
     "duration": "130"
     
 }
+
+
 Response: {
   "UPDATED":"TRUE"
 }`
 
 * Update Podcast: `PATCH /podcast/{id}
+
+
 Body: {
 
     "name": "selfcontrol", 
@@ -134,11 +168,15 @@ Body: {
     "host": "Frank Ocean"
     
 }
+
+
 Response: {
   "UPDATED":"TRUE"
 }`
 
 * Update Audiobook:  `PATCH /audiobook/{id}
+
+
 Body: {
 
     "title": "AJ", 
@@ -146,12 +184,16 @@ Body: {
     "narrator": "Ahmed"
     
 }
+
+
 Response: {
   "UPDATED":"TRUE"
 }
 
 
 * Delete Song/Podcast/Audiobook: `DELELTE /{audioFileType}/{audioFileId}
+
+
 Response: {
   "DELETED":"TRUE"
   }`
