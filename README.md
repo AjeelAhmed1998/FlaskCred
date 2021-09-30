@@ -9,7 +9,7 @@ Back end engineering project simulating an Audio Server using Flask and SQLite.
 
 As I had not used SQL in a long time I saw this coding exercise as as opportunity to revise some of the concepts such as foreign keys and joins. 
 
-Where full URLs are provided in responses they will be rendered as if service
+Where full URLs are provided in responses they will be rendered as if service.
 is running on 'http://127.0.0.1:5000/'.
 
 ## Open Endpoints
