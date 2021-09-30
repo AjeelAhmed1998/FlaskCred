@@ -20,142 +20,142 @@ Open endpoints require no Authentication.
 
 * Get Specific Song/Podcast/Audiobook: 
  
-    GET /{audioFileType}/{audioFileId}
+      GET /{audioFileType}/{audioFileId}
 
 
-    Body: None
+      Body: None
 
 
-    Response: [
-    3,
-    "seigfried",
-    "2021-09-25 17:11:32"
-    ]
+      Response: [
+      3,
+      "seigfried",
+      "2021-09-25 17:11:32"
+      ]
 
 * Get All Songs/Podcasts/Audiobooks: 
 
-    GET /{audioFileType}
+      GET /{audioFileType}
 
 
-    Body: None
+      Body: None
 
 
-    Response: [
-    [
-        3,
-        "seigfried",
-        120,
-        "2021-09-25 17:11:32"
-        ],
-        [
-        5,
-        "nikes",
-        120,
-        "2021-09-30 11:12:11"
-        ]
-    ]
+      Response: [
+      [
+          3,
+          "seigfried",
+          120,
+          "2021-09-25 17:11:32"
+          ],
+          [
+          5,
+          "nikes",
+          120,
+          "2021-09-30 11:12:11"
+          ]
+      ]
 
 
 
 * Create Song : 
  
-    POST /
+      POST /
 
 
-    Body: {
-    "audioFileType": "song", 
-    "audioFileMetadata":{
-        "name": "nikes", 
-        "duration": 120
-        }
-    }
+      Body: {
+      "audioFileType": "song", 
+      "audioFileMetadata":{
+          "name": "nikes", 
+          "duration": 120
+          }
+      }
 
 
 
 
-    Response: {
-        "audioFileMetadata": {
-            "duration": 100,
-            "host": "80",
-            "name": "cs101",
-            "participants": [
-            "joe",
-            "ali",
-            "jess"
-        ]
-    },
-    "audioFileType": "podcast"
-    }
+      Response: {
+          "audioFileMetadata": {
+              "duration": 100,
+              "host": "80",
+              "name": "cs101",
+              "participants": [
+              "joe",
+              "ali",
+              "jess"
+          ]
+      },
+      "audioFileType": "podcast"
+      }
 
 
 * Create Podcast : 
 
-    POST /
+      POST /
 
 
 
-    Body: {
-        "audioFileType": "podcast", 
-        "audioFileMetadata": {
-            "name": "cs101", 
-            "duration": 100, 
-            "host": "80", 
+      Body: {
+          "audioFileType": "podcast", 
+          "audioFileMetadata": {
+              "name": "cs101", 
+              "duration": 100, 
+              "host": "80", 
 
-            "participants": ["joe", "ali","jess"]
+              "participants": ["joe", "ali","jess"]
 
-        }
-    }
+          }
+      }
 
 
 
-    Response: {
-        "audioFileMetadata": {
-            "duration": 100,
-            "host": "80",
-            "name": "cs101",
-            "participants": [
-            "joe",
-            "ali",
-            "jess"
-        ]
-    },
-    "audioFileType": "podcast"
-    }
+      Response: {
+          "audioFileMetadata": {
+              "duration": 100,
+              "host": "80",
+              "name": "cs101",
+              "participants": [
+              "joe",
+              "ali",
+              "jess"
+          ]
+      },
+      "audioFileType": "podcast"
+      }
 
 
 
 * Create Audiobook : 
 
-    POST /
+      POST /
 
 
 
-    Body: {
-        "audioFileType": "audiobook", 
-        "audioFileMetadata": {
-        "title":"Story of Ajeel", 
-        "author": "Ajeel Ahmed", 
-        "narrator": "Ajeel Ahmed", 
-        "duration": 120
-        }
-    }
+      Body: {
+          "audioFileType": "audiobook", 
+          "audioFileMetadata": {
+          "title":"Story of Ajeel", 
+          "author": "Ajeel Ahmed", 
+          "narrator": "Ajeel Ahmed", 
+          "duration": 120
+          }
+      }
 
 
 
-    Response: {
-        "audioFileMetadata": {
-            "author": "Ajeel Ahmed",
-            "duration": 120,
-            "narrator": "Ajeel Ahmed",
-            "title": "Story of Ajeel"
-        },
-        "audioFileType": "audiobook"
-    }   
+      Response: {
+          "audioFileMetadata": {
+              "author": "Ajeel Ahmed",
+              "duration": 120,
+              "narrator": "Ajeel Ahmed",
+              "title": "Story of Ajeel"
+          },
+          "audioFileType": "audiobook"
+      }   
 
 
 * Update Song: 
  
-    PATCH /song/{id}
+      PATCH /song/{id}
 
 
         Body: {
@@ -175,46 +175,46 @@ Open endpoints require no Authentication.
         PATCH /podcast/{id}
 
 
-    Body: {
+      Body: {
 
-    "name": "selfcontrol", 
-    "duration": "130", 
-    "host": "Frank Ocean"
-    
-    }
+      "name": "selfcontrol", 
+      "duration": "130", 
+      "host": "Frank Ocean"
+
+      }
 
 
-    Response: {
-    "UPDATED":"TRUE"
-    }
+      Response: {
+      "UPDATED":"TRUE"
+      }
 
 * Update Audiobook:  
 
-    PATCH /audiobook/{id}
+      PATCH /audiobook/{id}
 
 
-    Body: {
+      Body: {
 
-        "title": "AJ", 
-        "author": "Ajeel", 
-        "narrator": "Ahmed"
-    
-    }
+          "title": "AJ", 
+          "author": "Ajeel", 
+          "narrator": "Ahmed"
+
+      }
 
 
-    Response: {
-        "UPDATED":"TRUE"
-    }
+      Response: {
+          "UPDATED":"TRUE"
+      }
 
 
 * Delete Song/Podcast/Audiobook: 
  
-    DELELTE /{audioFileType}/{audioFileId}
+      DELELTE /{audioFileType}/{audioFileId}
 
 
-    Response: {
-    "DELETED":"TRUE"
-    }
+      Response: {
+      "DELETED":"TRUE"
+      }
 
 
 
