@@ -18,15 +18,15 @@ is running on 'http://127.0.0.1:5000/'.
 
 Open endpoints require no Authentication.
 
-* Get Specific Song/Podcast/Audiobook: `GET /{audioFileType}/{audioFileId}`
+* Get Specific Song/Podcast/Audiobook: `GET /{audioFileType}/{audioFileId}
 Body: None
 Response: [
     3,
     "seigfried",
     "2021-09-25 17:11:32"
-]
+]`
 
-* Get All Songs/Podcasts/Audiobooks: `GET /{audioFileType}`
+* Get All Songs/Podcasts/Audiobooks: `GET /{audioFileType}
 Body: None
 Response: [
     [
@@ -41,9 +41,9 @@ Response: [
         120,
         "2021-09-30 11:12:11"
     ]
-]
+]`
 
-* Create Song : `POST /`
+* Create Song : `POST /
 Body: {
     "audioFileType": "song", 
     "audioFileMetadata":{
@@ -65,9 +65,9 @@ Response: {
     },
     "audioFileType": "podcast"
 }
+`
 
-
-* Create Podcast : `POST /`
+* Create Podcast : `POST /
 Body: {
     "audioFileType": "podcast", 
     "audioFileMetadata": {
@@ -92,9 +92,9 @@ Response: {
         ]
     },
     "audioFileType": "podcast"
-}
+}`
 
-* Create Audiobook : `POST /`
+* Create Audiobook : `POST /
 Body: {
     "audioFileType": "audiobook", 
     "audioFileMetadata": {
@@ -113,9 +113,9 @@ Response: {
         "title": "Story of Ajeel"
     },
     "audioFileType": "audiobook"
-}
+}   `
 
-* Update Song: `PATCH /song/{id}`
+* Update Song: `PATCH /song/{id}
 Body: {
 
     "name": "selfcontrol", 
@@ -124,9 +124,9 @@ Body: {
 }
 Response: {
   "UPDATED":"TRUE"
-}
+}`
 
-* Update Podcast: `PATCH /podcast/{id}`
+* Update Podcast: `PATCH /podcast/{id}
 Body: {
 
     "name": "selfcontrol", 
@@ -136,9 +136,9 @@ Body: {
 }
 Response: {
   "UPDATED":"TRUE"
-}
+}`
 
-*Update Audiobook:  `PATCH /audiobook/{id}`
+*Update Audiobook:  `PATCH /audiobook/{id}
 Body: {
 
     "title": "AJ", 
@@ -155,7 +155,7 @@ Response: {
 Response: {
   "DELETED":"TRUE"
 }
-
+`
 
 
 ### Unit Testing
